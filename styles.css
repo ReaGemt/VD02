@@ -1,0 +1,133 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 280px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.card img {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    width: 110px;
+    height: 110px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    background-color: #ddd; /* На случай, если изображение не загружается */
+}
+
+.card h2 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.9em;
+    margin: 5px 0;
+    color: #e0e0e0;
+}
+
+.card .bio {
+    font-size: 0.9em;
+    font-style: italic;
+    margin-bottom: 15px;
+    line-height: 1.4em;
+}
+
+.card .info {
+    margin-top: 15px;
+}
+
+.card .info p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.card .icon {
+    font-size: 1.2em;
+}
+
+.card .social-icons {
+    margin-top: 15px;
+}
+
+.card .social-icons a {
+    margin: 0 8px; /* Увеличенный отступ между иконками */
+    display: inline-block;
+    width: 32px; /* Увеличенный размер иконок */
+    height: 32px;
+}
+
+.card .social-icons img {
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.card .social-icons a:hover img {
+    filter: grayscale(0%);
+}
+
+.card button {
+    background-color: #fff;
+    color: #6e8efb;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card button:hover {
+    background-color: #6e8efb;
+    color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
